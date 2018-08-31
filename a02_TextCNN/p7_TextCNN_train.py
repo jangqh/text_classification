@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 #import sys
 #reload(sys)
 #sys.setdefaultencoding('utf-8') #gb2312
@@ -17,10 +16,11 @@ import word2vec
 #configuration
 FLAGS=tf.app.flags.FLAGS
 
+
 tf.app.flags.DEFINE_string("traning_data_path","../data/sample_multiple_label.txt","path of traning data.") #sample_multiple_label.txt-->train_label_single100_merge
 tf.app.flags.DEFINE_integer("vocab_size",100000,"maximum vocab size.")
 
-tf.app.flags.DEFINE_float("learning_rate",0.0003,"learning rate")
+tf.app.flags.DEFINE_float("learning_rate",0.003,"learning rate")
 tf.app.flags.DEFINE_integer("batch_size", 64, "Batch size for training/evaluating.") #批处理的大小 32-->128
 tf.app.flags.DEFINE_integer("decay_steps", 1000, "how many steps before decay learning rate.") #6000批处理的大小 32-->128
 tf.app.flags.DEFINE_float("decay_rate", 1.0, "Rate of decay for learning rate.") #0.65一次衰减多少
@@ -28,7 +28,7 @@ tf.app.flags.DEFINE_string("ckpt_dir","text_cnn_title_desc_checkpoint/","checkpo
 tf.app.flags.DEFINE_integer("sentence_len",100,"max sentence length")
 tf.app.flags.DEFINE_integer("embed_size",128,"embedding size")
 tf.app.flags.DEFINE_boolean("is_training",True,"is traning.true:tranining,false:testing/inference")
-tf.app.flags.DEFINE_integer("num_epochs",10,"number of epochs to run.")
+tf.app.flags.DEFINE_integer("num_epochs",20,"number of epochs to run.")
 tf.app.flags.DEFINE_integer("validate_every", 1, "Validate every validate_every epochs.") #每10轮做一次验证
 tf.app.flags.DEFINE_boolean("use_embedding",False,"whether to use embedding or not.")
 tf.app.flags.DEFINE_integer("num_filters", 128, "number of filters") #256--->512

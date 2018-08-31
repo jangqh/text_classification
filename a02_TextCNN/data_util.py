@@ -2,7 +2,8 @@
 import codecs
 import random
 import numpy as np
-from tflearn.data_utils import pad_sequences
+from keras.preprocessing.sequence import pad_sequences
+#from tflearn.data_utils import pad_sequences
 from collections import Counter
 import os
 import pickle
