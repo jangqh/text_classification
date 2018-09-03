@@ -2,6 +2,7 @@ Text Classification
 -------------------------------------------------------------------------
 the purpose of this repository is to explore text classification methods in NLP with deep learning.
 
+
 UPDATE: 
 
 1. <a href='https://github.com/brightmart/ai_law'>

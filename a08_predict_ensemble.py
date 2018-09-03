@@ -16,6 +16,7 @@ from a08_DynamicMemoryNetwork.a8_dynamic_memory_network import DynamicMemoryNetw
 from p7_TextCNN_model import TextCNN
 from p71_TextRCNN_mode2 import TextRCNN
 
+
 #configuration
 FLAGS=tf.app.flags.FLAGS
 tf.app.flags.DEFINE_integer("num_classes",1999,"number of label")
@@ -227,6 +228,7 @@ def get_label_using_logits_batch(question_id_sublist,logits_batch,vocabulary_ind
 def write_question_id_with_labels(question_id,labels_list,f):
     labels_string=",".join(labels_list)
     f.write(question_id+","+labels_string+"\n")
+
 
 if __name__ == "__main__":
     tf.app.run()
